@@ -11,11 +11,17 @@ export default class App extends Component {
     };
   }
 
+  handleEnterKey = word => {
+    this.setState({
+      word: word
+    });
+  };
+
   render() {
     return (
       <div>
         <Header />
-        <Input />
+        <Input handleEnterKey={this.handleEnterKey} />
       </div>
     );
   }
